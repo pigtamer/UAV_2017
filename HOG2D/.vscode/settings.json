@@ -2,7 +2,8 @@
     "files.associations": {
         "xstring": "cpp",
         "initializer_list": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "string": "cpp"
     },
     "git.ignoreLimitWarning": true
 }

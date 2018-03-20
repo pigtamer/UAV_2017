@@ -166,15 +166,15 @@ void HoGTrainer::test_trained_detector(String obj_det_filename,
                 if (foundWeights[j] > 0){
                     // cout << foundWeights[j] << endl;
                     double w = foundWeights[j];
-                    putText(img, to_string(w), detections[j].tl(),  FONT_HERSHEY_PLAIN, 2, Scalar(255, 0, 0));
+                    putText(img, "["+to_string(i)+"]"+to_string(w), detections[j].tl(),  FONT_HERSHEY_PLAIN, 2, Scalar(255, 0, 0));
                     rectangle(img, detections[j], color, img.cols / 400 + 1);
                 }else{
-                    putText(img, "[!]", Point(0, img.cols / 4),  FONT_HERSHEY_DUPLEX, 5, Scalar(0, 0, 255));
+                    // putText(img, "[!]", Point(0, img.cols / 4),  FONT_HERSHEY_DUPLEX, 5, Scalar(0, 0, 255));
                 }
             }
         }
     }else{
-        putText(img, "[!]", Point(0, img.cols / 4),  FONT_HERSHEY_DUPLEX, 5, Scalar(0, 0, 255));
+        // putText(img, "[!]", Point(0, img.cols / 4),  FONT_HERSHEY_DUPLEX, 5, Scalar(0, 0, 255));
     }
     imshow(obj_det_filename, img);
 
